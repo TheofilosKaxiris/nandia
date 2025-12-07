@@ -1,0 +1,186 @@
+/* Import the color palette */
+@import url('colors.css');
+
+
+/* Header Specific Styles */
+header {
+    background: var(--color-primary);
+    color: var(--color-header-text);
+    padding: 1.5rem 2.5rem 1.1rem 2.5rem;
+    box-shadow: 0 6px 24px 0 rgba(18, 20, 50, 0.13);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 0;
+    transition: background 0.5s;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-light);
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    background: none;
+    animation: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+    display: inline-block;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+nav li {
+    margin: 0 0.5rem;
+}
+
+nav a {
+    color: var(--color-light);
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(18, 20, 50, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+nav a:hover, nav a:focus {
+    background: var(--color-light);
+    color: var(--color-primary);
+    box-shadow: 0 4px 16px rgba(46, 59, 253, 0.13);
+}
+
+nav a.active {
+    background: var(--color-secondary);
+    color: var(--color-light);
+    font-weight: 700;
+    box-shadow: 0 4px 16px rgba(119, 87, 78, 0.18);
+}
+
+/* Logo styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.2rem;
+    gap: 1.2rem;
+}
+
+.logo-container h1 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--color-light);
+    text-shadow: 0 2px 12px rgba(18, 20, 50, 0.18);
+    margin: 0;
+    padding: 0;
+    background: none;
+    animation: none;
+}
+
+/* Responsive styles */
+@media (min-width: 1001px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 3rem;
+    }
+    
+    .logo-container {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 0rem 1.5rem;
+        border-radius: 0;
+    }
+    .logo-container {
+        margin-bottom: 0rem;
+        justify-content: center;
+    }
+    .logo-container h1, header h1 {
+        font-size: 2.3rem;
+    }
+    nav ul {
+        gap: 0.8rem;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+    nav a {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        padding: 1.2rem 1rem 1rem 1rem;
+    }
+
+    .logo-container h1, header h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    nav li {
+        margin-top: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.95rem;
+        padding: 0.5rem 0.9rem;
+    }
+}
+
+
+@media (max-width: 540px) {
+    header {
+        padding: 1rem;
+    }
+    .logo-container h1, header h1 {
+        font-size: 1.7rem;
+        line-height: 1.1;
+    }
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+        padding-bottom: 0.5rem;
+    }
+
+    nav li {
+        flex: 0 0 45%;  /* Each item takes 45% width, allowing gap space */
+        margin: 0;
+        justify-content: center;
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}

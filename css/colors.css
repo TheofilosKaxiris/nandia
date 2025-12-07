@@ -1,0 +1,68 @@
+/* Color Palette - Warm Educational Theme
+
+   Primary: #2D5F5D (Deep Teal) - Trust, knowledge, professionalism
+   Secondary: #D4A574 (Warm Gold) - Warmth, success, achievement
+   Accent: #8B4513 (Rich Brown) - Earth, stability, tradition
+   Dark: #1B2838 (Charcoal) - Text, depth
+   Light: #F9F6F1 (Warm White) - Backgrounds, softness
+
+   This palette combines:
+   - Deep teal for trust and academic excellence
+   - Warm gold for achievement and encouragement
+   - Rich earth tones for stability and tradition
+   - Creates a professional yet warm, approachable atmosphere
+*/
+
+:root {
+    /* Main colors */
+    --color-primary: #2D5F5D;
+    --color-primary-light: #E8F3F2;
+    --color-primary-dark: #1F4442;
+    --color-secondary: #D4A574;
+    --color-secondary-light: #FAF3E9;
+    --color-secondary-dark: #B88A5A;
+
+    /* Neutral colors */
+    --color-dark: #1B2838;
+    --color-dark-80: rgba(27, 40, 56, 0.8);
+    --color-gray-dark: #4A5568;
+    --color-gray: #718096;
+    --color-gray-light: #CBD5E0;
+    --color-light: #F9F6F1;
+
+    /* Functional colors */
+    --color-success: #48BB78;
+    --color-warning: #ECC94B;
+    --color-error: #F56565;
+      /* Gradients */
+    --gradient-blue: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    --gradient-warm: linear-gradient(135deg, var(--color-primary-light), var(--color-secondary-light));
+
+    /* Component colors */
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-heading: var(--color-dark);
+    --color-link: var(--color-primary);
+    --color-button: var(--color-primary);
+    --color-button-hover: var(--color-primary-dark);
+    --color-button-text: var(--color-light);
+    --color-border: var(--color-gray-light);
+    --color-shadow: rgba(27, 40, 56, 0.1);
+      /* Header specific */
+    --color-header-bg: var(--color-dark);
+    --color-header-text: var(--color-light);
+    --color-nav-hover: var(--color-primary);
+}
+
+/* Helper classes for direct color usage */
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-dark { background-color: var(--color-dark); }
+.bg-light { background-color: var(--color-light); }
+.bg-gradient-blue { background-image: var(--gradient-blue); }
+.bg-gradient-warm { background-image: var(--gradient-warm); }
+
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-dark { color: var(--color-dark); }
+.text-light { color: var(--color-light); }
