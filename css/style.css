@@ -12,10 +12,28 @@
 body {
     font-family: 'Noto Sans Greek', Arial, sans-serif;
     line-height: 1.7;
-    background: linear-gradient(120deg, #f7f8fa 0%, #e6eaff 100%);
     color: #222;
     min-height: 100vh;
     position: relative;
+    background: linear-gradient(120deg, #f7f8fa 0%, #e6eaff 100%);
+}
+
+/* Optional: Add subtle background pattern/texture to body */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/background-pattern.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(4px);
+    opacity: 0.08;
+    z-index: -1;
+    pointer-events: none;
 }
 
 h1, h2, h3 {
